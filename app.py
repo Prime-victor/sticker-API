@@ -1,10 +1,11 @@
 # Import the Flask framework and other necessary modules
 from flask import Flask, jsonify, send_from_directory
+from flask_cors import CORS
 import os
 
 # Create a Flask web application instance
 app = Flask(__name__)
-
+CORS(app) 
 # Define the directory where your sticker images are stored
 # This assumes your 'stickers' folder is in the same directory as app.py
 STICKERS_DIR = 'stickers'
